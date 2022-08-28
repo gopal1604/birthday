@@ -1,4 +1,4 @@
-const personName = 'Happy Birthday Rajlaxmi';
+const personName = 'Happy Birthday Baby';
 
 document.title = personName;
 
