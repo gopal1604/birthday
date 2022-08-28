@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('./background.gif');
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+}
+
+.waviy {
+    position: absolute;
+}
+
+.waviy span {
+    display: inline-block;
+    font-size: x-large;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
+
+.word {
+    height: auto;
+    color: white;
+    font-size: x-large;
+    font-weight: 600;
+    width: 100%;
+    font-style: italic;
+    position: absolute;
+    text-align: center;
+    padding: 1rem;
+    top: 50%;
+}
+
+#banner {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#balloon-group {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+}
+
+#party-button {
+    width: 20rem;
+    height: auto;
+    border-radius: 5px;
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    top: 50%;
+    left: 50%;
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    transform: translate(-50%, -50%);
+}
+
+#party-button>div {
+    margin-top: .7rem;
+    height: 100%;
+}
+
+#party-button>img {
+    width: 3rem;
+}
+
+.waviy {
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: x-large;
+    font-weight: 600;
+    color: #fff;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+#cake-container {
+    top: 150%;
+    width: 100%;
+    position: absolute;
+}
+
+.cake {
+    width: 10rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.flame {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 2rem;
+}
+
+#popper-left {
+    position: absolute;
+    width: 25%;
+    top: 20%;
+    left: 0;
+    display: none;
+}
+
+#popper-right {
+    position: absolute;
+    width: 25%;
+    top: 20%;
+    right: 0;
+    display: none;
+}
+
+#footer-text {
+    position: absolute;
+    bottom: 2%;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
+#footer-text i {
+    color: red;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    #banner {
+        width: 100%;
+    }
+
+    .waviy {
+        margin-top: 38%;
+    }
+
+    .footer-text {
+        font-size: medium;
+        bottom: 4%;
+    }
+}
